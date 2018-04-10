@@ -6,15 +6,24 @@ import aplication.domain.model.ParticipanteModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParticipanteModelToEntity {
+public class ParticipanteModelToEntity{
 
     public static List<ParticipanteModel> reverse(List<ParticitanteEntity> particitanteEntities) {
         List<ParticipanteModel> participantesModel = new ArrayList<>();
         for (ParticitanteEntity particitanteEntity :particitanteEntities){
             ParticipanteModel participanteModel = new ParticipanteModel();
             participanteModel.setNombre(particitanteEntity.getNombre());
+            participanteModel.setRut(particitanteEntity.getRut());
             participantesModel.add(participanteModel);
         }
         return participantesModel;
+    }
+
+    public static ParticipanteModel reverse(ParticitanteEntity particitanteEntity) {
+        ParticipanteModel participanteModel = new ParticipanteModel();
+        participanteModel.setNombre(particitanteEntity.getNombre());
+        participanteModel.setRut(particitanteEntity.getRut());
+
+        return participanteModel;
     }
 }

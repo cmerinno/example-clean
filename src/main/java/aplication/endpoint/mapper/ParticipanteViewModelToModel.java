@@ -16,9 +16,18 @@ public class  ParticipanteViewModelToModel {
         for (ParticipanteModel particitanteModel :particitantesModel){
             ParticipanteViewModel participanteViewModel = new ParticipanteViewModel();
             participanteViewModel.setNombre(particitanteModel.getNombre());
+            participanteViewModel.setRut(particitanteModel.getRut());
             participantesViewModel.add(participanteViewModel);
         }
         return participantesViewModel;
+    }
+
+    public static ParticipanteViewModel reverse(ParticipanteModel particitantesModel) {
+        ParticipanteViewModel participanteViewModel = new ParticipanteViewModel();
+        participanteViewModel.setNombre(particitantesModel.getNombre());
+        participanteViewModel.setRut(particitantesModel.getRut());
+
+        return participanteViewModel;
     }
 
 }

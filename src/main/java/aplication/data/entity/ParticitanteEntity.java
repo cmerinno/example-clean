@@ -5,4 +5,5 @@ import lombok.Data;
 @Data
 public class ParticitanteEntity {
     private String nombre;
+    private String rut;
 }
